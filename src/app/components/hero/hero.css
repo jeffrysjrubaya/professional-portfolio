@@ -1,0 +1,63 @@
+
+[class^="reveal-text"] {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: smoothReveal 1s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+}
+
+.reveal-text-1 { animation-delay: 0.2s; }
+.reveal-text-2 { animation-delay: 0.4s; }
+.reveal-text-3 { animation-delay: 0.6s; }
+.reveal-text-4 { animation-delay: 0.8s; }
+
+@keyframes smoothReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hover-scale {
+  transition: transform 0.2s ease-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-10px);}
+  60% {transform: translateY(-5px);}
+}
+
+.bg-blob-1, .bg-blob-2 {
+  position: absolute;
+  filter: blur(80px);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.bg-blob-1 {
+  width: 400px; height: 400px;
+  background: rgba(var(--bs-primary-rgb), 0.1);
+  top: -100px; right: -100px;
+}
+
+.bg-blob-2 {
+  width: 300px; height: 300px;
+  background: rgba(var(--bs-secondary-rgb), 0.1);
+  bottom: 10%; left: -50px;
+}
+
+.underline-grow {
+  background-image: linear-gradient(var(--bs-primary), var(--bs-primary));
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 4px;
+  transition: background-size 0.5s ease;
+  &:hover { background-size: 100% 4px; }
+}

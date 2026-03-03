@@ -1,0 +1,22 @@
+.navbar {
+  transition: all 0.3s ease-in-out;
+  padding: 0.8rem 0;
+
+  .nav-link {
+    font-weight: 500;
+    color: #4b5563;
+    
+    &:hover, &.active {
+      color: var(--bs-primary);
+    }
+  }
+
+  .navbar-brand {
+    font-size: 1.4rem;
+    letter-spacing: -0.5px;
+  }
+}
+
+:host {
+  display: block;
+}

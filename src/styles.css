@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+.ripple-span {
+  position: absolute;
+  background: rgba(var(--bs-primary-rgb), 0.15);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-animation 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

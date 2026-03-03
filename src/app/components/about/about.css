@@ -1,0 +1,28 @@
+#about {
+  .tracking-widest {
+    letter-spacing: 0.15rem;
+    font-size: 0.85rem;
+  }
+
+  .progress {
+    background-color: #e9ecef;
+    overflow: visible;
+    border-radius: 10px;
+
+    .progress-bar {
+      border-radius: 10px;
+      transition: width 1.5s ease-in-out;
+    }
+  }
+
+  .card {
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  .bi-check-circle-fill {
+    font-size: 1.2rem;
+  }
+}
